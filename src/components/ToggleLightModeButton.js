@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ToggleLightModeButton(props) {
+function ToggleLightModeButton({ toggleLightMode }) {
 
   return (
-    <button onClick={() => console.log('what goes here?')}>Toggle Light Mode</button>
+    <button onClick={ toggleLightMode }>Toggle Light Mode</button>
   )
 
 }

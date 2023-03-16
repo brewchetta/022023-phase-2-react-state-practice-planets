@@ -1,13 +1,20 @@
 import React from 'react'
 
-function PlanetSearch(props) {
+function PlanetSearch({ setSearch, search }) {
 
   function handleChange(e) {
-    console.log('When you type, you should see planets whose names include the search term');
+    setSearch( e.target.value )
+  }
+
+  function handleClear() {
+    setSearch("")
   }
 
   return (
-    <input type="text" onChange={handleChange} placeholder='search' />
+    <>
+      <input type="text" onChange={handleChange} placeholder='search' />
+      <button onClick={handleClear}>Clear</button>
+    </>
   )
 }
 
